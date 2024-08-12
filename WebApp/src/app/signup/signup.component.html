@@ -1,0 +1,41 @@
+<div class="body-cont">
+    <div class="login-container">
+        <h2> Register </h2>
+        <form>
+            <div class="input-group">
+                <label for="fname">First Name</label>
+                <input [(ngModel)]="firstname" type="text" name="fname" id="fname">First Name
+            </div>
+            <div class="input-group">
+                <label for="lname">Last Name</label>
+                <input [(ngModel)]="lastname" type="text" name="lname" id="lname">Last Name
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input [(ngModel)]="email" type="text" name="email" id="email"> Email
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input [(ngModel)]="password" type="password" name="password" id="password"> Password
+            </div>
+            <div class="input-group">
+                <label for="cpassword">Confirm Password</label>
+                <input [(ngModel)]="confirmPassword" type="password" name="cpassword" id="cpassword">Confirm Password
+            </div>
+            <div class="input-group">
+                <label>Role</label>
+                <label for="user-role">
+                    <input [(ngModel)]="role" type="radio" id="user-role" name="role" value="user">
+                    User
+                </label>
+                <label for="admin-role">
+                    <input [(ngModel)]="role" type="radio" id="admin-role" name="role" value="admin">
+                    Admin
+                </label>
+            </div>
+            <button type="submit" (click)="registerUser()">Register</button>
+        </form>
+    </div>
+    If already registered, 
+    <button routerLink="/login"> Login</button>
+</div>

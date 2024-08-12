@@ -1,0 +1,18 @@
+<!-- <div class="body-cont"> -->
+    <div class="login-container">
+        <h2> Login </h2>
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input [(ngModel)]="email" type="text" name="email"> Email
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input [(ngModel)]="password" type="password" name="password"> Password
+            </div>
+            <button (click)="loginUser()" type="submit">Login</button>
+        </form>
+    </div>
+    If not registered, 
+    <button routerLink="/signup"> Register</button>
+<!-- </div> -->

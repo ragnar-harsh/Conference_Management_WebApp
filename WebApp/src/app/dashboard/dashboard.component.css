@@ -1,0 +1,120 @@
+nav{
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.container{
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h2{
+    margin: 0;
+}
+
+.header button{
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.meeting{
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.meeting:last-child{
+    border-bottom: none;
+
+}
+.meeting-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meeting-header h3{
+    margin:0;
+
+}
+.meeting-details{
+    margin: 10px 0 0 0;
+}
+.meeting-details p{
+    margin: 5px 0;
+}
+.edit-button{
+    padding: 5px 10px;
+    align-content: right;
+    background: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.login-container{
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h2{
+    margin-bottom: 20px;
+}
+
+.input-group{
+    margin-bottom: 15px;
+    text-align: left;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.role-group label{
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+input[type="radio"]{
+    margin-right: 5px;
+}
+
+button{
+    width: 15%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #0056b3;
+}

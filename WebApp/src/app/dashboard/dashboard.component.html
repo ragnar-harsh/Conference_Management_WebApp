@@ -1,0 +1,49 @@
+<nav>
+    <div class="header"><button (click)="logout()"> Logout</button></div>
+</nav>
+<div class="container">
+    <div class="header">
+        <h2>Meeting Schedule</h2>
+        <button *ngIf="role === 'admin'" (click)="addNewMeeting()"> Add New Meeting</button>
+    </div>
+    <div *ngFor="let meeting of AllMeetings" class="meeting">
+        <div class="meeting-header">
+            <h3>{{meeting.title}}</h3>
+            <button *ngIf="role === 'admin'" class="edit-button" (click)="editMeeting(meeting.id)">Edit</button>
+            <button *ngIf="role === 'admin'" class="edit-button" (click)="removeMeeting(meeting.id)">Remove</button>
+        </div>
+        <div class="meeting-details">
+            <p><strong>Date:</strong> {{meeting.date}}</p>
+            <p><strong>Time:</strong> {{meeting.time}}</p>
+            <p><strong>Location:</strong> {{meeting.location}}</p>
+            <p><strong>description:</strong> {{meeting.description}}</p>
+        </div>
+    </div>
+
+        <div *ngIf="AddMode" class="login-container">
+            <h2> Add New Meeting </h2>
+            <form>
+                <div class="input-group">
+                    <label for="fname">Title</label>
+                    <input [(ngModel)]="title" type="text" name="fname" id="fname"> Meeting Title
+                </div>
+                <div class="input-group">
+                    <label for="lname">Date</label>
+                    <input [(ngModel)]="date" type="date" name="lname" id="lname">Date
+                </div>
+                <div class="input-group">
+                    <label for="email">Description</label>
+                    <input [(ngModel)]="desc" type="text" name="email" id="email"> Description
+                </div>
+                <div class="input-group">
+                    <label for="password">Time</label>
+                    <input [(ngModel)]="time" type="time" name="password" id="password"> Time
+                </div>
+                <div class="input-group">
+                    <label for="cpassword">Location</label>
+                    <input [(ngModel)]="location" type="text" name="cpassword" id="cpassword">Location for Meeting
+                </div>
+                <button type="submit" (click)="AddTheMeeting()">Add Meeting</button>
+            </form>
+        </div>
+    </div>
